@@ -82,6 +82,13 @@ async function receiveInput() {
             countryIndependent.textContent = `Independent: ${data[0].independent}`
             country.appendChild(countryIndependent)
 
+            //  Population
+            const countryPopulation = document.createElement('h3')
+            countryPopulation.textContent = `Population: ${data[0].population}`
+            country.appendChild(countryPopulation)
+
+
+
             for (const language in data[0].languages) {
                 // console.log(language);
                 // console.log(data[0].languages[language]);
@@ -89,6 +96,9 @@ async function receiveInput() {
                 countryLanguages.textContent = `Languages: ${language}: ${data[0].languages[language]}`
                 country.appendChild(countryLanguages);
             }
+
+
+
 
 
 
